@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.App">
+  <grid id="27dc6" binding="panel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="882" height="491"/>
+    </constraints>
+    <properties>
+      <background color="-14210516"/>
+      <foreground color="-11974327"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <toolbar id="445d8">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-14144723"/>
+          <foreground color="-14736860"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="4019f" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <foreground color="-1550"/>
+              <maximumSize width="140" height="30"/>
+              <model>
+                <item value="Load asm"/>
+                <item value="Load obj"/>
+              </model>
+            </properties>
+          </component>
+          <component id="ca090" class="javax.swing.JButton" binding="stepButton">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <foreground color="-1"/>
+              <maximumSize width="140" height="30"/>
+              <minimumSize width="140" height="30"/>
+              <text value="Step"/>
+            </properties>
+          </component>
+          <component id="24d41" class="javax.swing.JButton" binding="startButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <foreground color="-1550"/>
+              <maximumSize width="140" height="30"/>
+              <minimumSize width="140" height="30"/>
+              <text value="Start"/>
+            </properties>
+          </component>
+          <component id="923a0" class="javax.swing.JButton" binding="stopButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <foreground color="-1550"/>
+              <maximumSize width="140" height="30"/>
+              <minimumSize width="140" height="30"/>
+              <text value="Stop"/>
+            </properties>
+          </component>
+          <component id="45487" class="javax.swing.JButton" binding="reloadButton">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <foreground color="-1550"/>
+              <maximumSize width="140" height="30"/>
+              <minimumSize width="140" height="30"/>
+              <text value="Reload"/>
+            </properties>
+          </component>
+          <component id="5d62f" class="javax.swing.JButton" binding="buttonRefresh">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <enabled value="true"/>
+              <foreground color="-1"/>
+              <maximumSize width="140" height="30"/>
+              <minimumSize width="140" height="30"/>
+              <text value="Refresh"/>
+            </properties>
+          </component>
+          <component id="d75dc" class="javax.swing.JButton" binding="buttonPrint">
+            <constraints/>
+            <properties>
+              <background color="-11974327"/>
+              <foreground color="-1"/>
+              <text value="Print"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+      <grid id="5c061" binding="re" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-14210516"/>
+          <enabled value="true"/>
+          <foreground color="-14144723"/>
+          <minimumSize width="238" height="45"/>
+          <preferredSize width="244" height="45"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <scrollpane id="d520e">
+            <constraints>
+              <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="7" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none" title="Memory"/>
+            <children>
+              <component id="e40cc" class="javax.swing.JTable" binding="table_mem">
+                <constraints/>
+                <properties>
+                  <autoCreateRowSorter value="true"/>
+                  <font name="LM Mono Caps 10" style="1"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <scrollpane id="b5d1c">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="1" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="158" height="120"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-14144723"/>
+              <enabled value="false"/>
+              <foreground color="-14736860"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="ed88" class="javax.swing.JTable" binding="table_regs" default-binding="true">
+                <constraints/>
+                <properties>
+                  <fillsViewportHeight value="false"/>
+                  <foreground color="-11249060"/>
+                  <showHorizontalLines value="false"/>
+                  <showVerticalLines value="false"/>
+                  <updateSelectionOnSort value="true"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <scrollpane id="e71d1">
+            <constraints>
+              <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="7" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="158" height="200"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none" title="Commands"/>
+            <children>
+              <component id="b92b" class="javax.swing.JTable" binding="table_commands">
+                <constraints/>
+                <properties>
+                  <enabled value="false"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <grid id="b0082" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="25d23" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Program"/>
+                </properties>
+              </component>
+              <grid id="a31d9" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="b41fc" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="PC"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="9f5ea" class="javax.swing.JLabel" binding="program_counter">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Label"/>
+                </properties>
+              </component>
+              <component id="38c77" class="javax.swing.JLabel" binding="t">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Label"/>
+                </properties>
+              </component>
+              <component id="9bffa" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Mem. rows"/>
+                </properties>
+              </component>
+              <component id="d5f7b" class="javax.swing.JTextField" binding="memSize">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="100"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
